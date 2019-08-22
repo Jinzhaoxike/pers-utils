@@ -18,6 +18,7 @@ public class StringUtils {
 
     /**
      * 首字母大写
+     * 只有首字母是a-z的才会变转换
      * @param value
      * @return
      */
@@ -37,12 +38,18 @@ public class StringUtils {
     /**
      * 脱敏转换(*号代替)
      * 如果明文长度大于文本长度,则首个字符脱敏
-     * @param value
-     * @param prefixLen
-     * @param suffixLen
+     * @param value 明文
+     * @param prefixLen 前缀明文长度
+     * @param suffixLen 后缀明文长度
      * @return
      */
     public static String mistinessConvert(String value, int prefixLen, int suffixLen) {
+        if (prefixLen < 0) {
+            throw new RuntimeException("prefixLen不能小于零");
+        }
+        if (suffixLen < 0) {
+            throw new RuntimeException("suffixLen不能小于零");
+        }
         int minLen = prefixLen + suffixLen;
         if (isEmpty(value)) {
             return value;
