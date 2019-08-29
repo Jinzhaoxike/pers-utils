@@ -5,7 +5,7 @@ package pers.wesley.util;
  * @Author : jinzhaoxike91@outlook.com
  * @Create : 2019/08/21 17:16
  */
-public class StringUtils {
+public abstract class StringUtils {
 
     private static final char MISTINESS_PATTERN = '*';
 

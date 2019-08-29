@@ -5,7 +5,7 @@ package pers.wesley.util.validate;
  * @Author : jinzhaoxike91@outlook.com
  * @Create : 2019/08/15 13:51
  */
-public class ValidateUtils {
+public abstract class ValidateUtils {
 
     /**
      * 验证长度范围

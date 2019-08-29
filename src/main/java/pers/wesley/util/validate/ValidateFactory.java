@@ -9,7 +9,7 @@ import java.util.Map;
  * @Author : jinzhaoxike91@outlook.com
  * @Create : 2019/08/09 17:50
  */
-public class ValidateFactory {
+public abstract class ValidateFactory {
 
     private static Map<Integer, IValidate> validates = new HashMap<>(16);
 
